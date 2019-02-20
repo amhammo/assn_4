@@ -40,6 +40,11 @@ p {
     position: relative;
 }
 
+.datawrapper {
+    position: relative;
+    overflow: auto;
+}
+
 img {
     width: 100%;
 }
@@ -82,6 +87,14 @@ img {
     width: 100%;
     padding: 60px;
     font-size: 2em;
+    font-family: sans-serif;
+}
+
+/* I figured out class .content[space]p to mean any .content parent with a p descendant. Yes! */
+.content p {
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 1.1em;
 }
 
 .dot .close {
@@ -117,28 +130,32 @@ img {
     background-color: rgba(130, 48, 255, 0.65)
 }
 
+.dot.red {
+    background-color: rgba(255, 0, 0, 0.65)
+}
+
 .dot.seats {
     top: 53%;
-    left: 25%;
-    transform: translate(-25%, -53%);
+    left: 70%;
+    transform: translate(-70%, -53%);
 }
 
 .dot.central {
-    top: 15%;
-    left: 40%;
-    transform: translate(-40%, -15%);
+    top: 17%;
+    left: 23%;
+    transform: translate(-23%, -17%);
 }
 
-.dot.wheels {
-    top: 75%;
-    left: 60%;
-    transform: translate(-60%, -75%);
+.dot.door {
+    top: 27%;
+    left: 51%;
+    transform: translate(-51%, -27%);
 }
 
-.dot.school {
-    top: 35%;
-    left: 53%;
-    transform: translate(-53%, -35%);
+.dot.sign {
+    top: 30%;
+    left: 12%;
+    transform: translate(-12%, -30%);
 }
 
 /*********************************
@@ -160,8 +177,16 @@ img {
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
 @media(min-width: 681px) {
+
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    .flex {
+        display: flex;
+    }
+
+    .flex img {
+        flex: 1 1 auto;
+    }
 }
 
 /*********************************************************************
@@ -180,7 +205,7 @@ body {
 
 /* All page elements will be inside this container block, which is also centered 2: top/bottom and left/right*/
 main {
-    width: 60%;
+    /*width: 60%; */
     margin: 0 auto;
     color: #000000;
 }
@@ -228,7 +253,6 @@ h2 {
 /* Article headline styles */
 h3 {
     font-family: arial;
-    padding: 0 20px;
     color: #000000;
 }
 
@@ -241,7 +265,7 @@ h4 {
 /* Text styles for all paragraphs */
 p {
     color: #000000;
-    font-size: 16px;
+    font-size: 20px;
     font-family: nimrod;
     vertical-align: top;
     padding: 0 20px;
@@ -261,16 +285,18 @@ a:link, a:visited {
 /*these are classes https://www.w3schools.com/css/tryit.asp?filename=trycss_syntax_class */
 .byline {
     font-weight: bold;
+    font-size: 16px;
 }
 
 .caption {
     color: #737373;
+    font-size: 16px;
 }
 
 .captionbyline {
     color: #737373;
     font-style: italic;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 /* I created this span to try a new tag, and used it in my main html file */
@@ -281,16 +307,15 @@ span {
     font-family: arial;
 }
 
-figure {
+/* figure {
     padding: 15px 15px;
     float: right;
     display: inline;
-}
-
+} */
 figcaption {
     color: #737373;
     font-family: arial;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 /* Note that the footer row is also cleared beneath both columns */
