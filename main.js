@@ -1,6 +1,7 @@
 $("body").on("click", ".dot", function (e) {
 	// on click add an active class to the dot that was clicked
 	e.preventDefault();
+	console.log("dot clicked")
 
 	const $this_dot = $(this);
 

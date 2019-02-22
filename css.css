@@ -97,6 +97,10 @@ img {
     font-size: 1.1em;
 }
 
+.dot.active .close {
+    z-index: 20;
+}
+
 .dot .close {
     position: absolute;
     top: 10px;
